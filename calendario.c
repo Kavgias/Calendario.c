@@ -2,39 +2,39 @@
 #include <stdlib.h>
 #include <string.h>
 
-int diaSemanaI;    // Dia da semana em que o 1º de janeiro cai
-int anoBi;         // Indica se o ano é bissexto (1 Verdadeiro | 0 Falso)
-int ano, mes, dia; // Ano atual
+int diaSemanaI;    // dia da semana em que o 1º de janeiro cai
+int anoBi;         // indica se o ano é bissexto (1 Verdadeiro | 0 Falso)
+int ano, mes, dia; // ano atual
 
 int mesDias[] = {31, 28, 31, 30, 31, 30,
-                 31, 31, 30, 31, 30, 31}; // Número de dias em cada mês
+                 31, 31, 30, 31, 30, 31}; // número de dias em cada mês
 char *days[] = {"dom", "seg", "ter", "qua",
-                "qui", "sex", "sab"}; // Dias da semana
+                "qui", "sex", "sab"}; // dias da semana
 
 char *months[] = {"Janeiro",  "Feveiro", "Março\t",  "Abril",
                   "Maio",     "Junho",   "Julho",    "Agosto",
                   "Setembro", "Outubro", "Novembro", "Dezembro"};
 
-int agendamentos[12][31]; // Array que irá armazenar os agendamentos
+int agendamentos[12][31]; // array que irá armazenar os agendamentos
 
 void inicializarAgendamentos() {
   for (int i = 0; i < 12; i++) {
     for (int j = 0; j < mesDias[i]; j++) {
-      agendamentos[i][j] = 0; // Inicialmente não há agendamentos
+      agendamentos[i][j] = 0; // inicialmente não há agendamentos
     }
   }
 }
 
 int calcularDiaSemana(int mes) {
   int totalDias = 0;
-  // Somar o número de dias de todos os meses anteriores
+  // soma o número de dias de todos os meses anteriores
   for (int i = 0; i < mes; i++) {
     totalDias += mesDias[i];
   }
-  // Considerar o ano bissexto, se aplicável
-  if (mes > 1 && anoBi)
-    totalDias++;
-  // Adicionar o deslocamento do dia da semana inicial
+  // // considera o ano bissexto, se aplicável
+  // if (mes > 1 && anoBi)
+  //   totalDias++;
+  // adiciona o deslocamento do dia da semana inicial
   return (diaSemanaI + totalDias) % 7;
 }
 
