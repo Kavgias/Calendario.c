@@ -1,7 +1,4 @@
-* = CORRIGIR TEXTO
-
-Um arquivo chamado README.md que lista os membros do grupo, resume seu programa  
-e explica quaisquer problemas que você teve.
+Um arquivo chamado README.md que lista os membros do grupo, resume seu programa e explica quaisquer problemas que você teve.
 
 GRUPO: Gabriel de Assis, Leandro Kavgias, Renan Hammerschlag.
 
@@ -10,7 +7,7 @@ Resumo do nosso programa:
 
  O nosso código cria um calendário interativo onde é possível visualizar, inserir e verificar agendamentos feitos por nossos usuários. Ele começa definindo variáveis para armazenar informações sobre o ano, mês, dia da semana e se o ano é bissexto. Além disso, há arrays para armazenar o número de dias em cada mês, os dias da semana e os meses do ano.
 
- Nossa função `inicializarAgendamentos()` armazena os agendamentos para cada dia do ano. A função `mostrarCalendario()` imprime o calendário do ano especificado, mostrando os dias de cada mês. *Os dias deveriam ser impressos em sequência, ele começa pelo dia da semana em que o 1º de janeiro cai, mas todos os meses começam com o dia 01 de acordo com o dia q o Usuario decidiu ser o 1º do ano (se começou quinta, todos os outros meses começam na quinta)*
+ Nossa função `inicializarAgendamentos()` armazena os agendamentos para cada dia do ano. A função `mostrarCalendario()` imprime o calendário do ano especificado, mostrando os dias de cada mês. Os dias são impressos em sequência, ele começa pelo dia da semana em que o 1º de janeiro cai, mas possui um erro referente ao final do mês de fevereiro, inicio de março (erro destacado nos problemas q tivemos (1.1))
 
  A função `inserirAgendamento()` permite o usuário a inserir um agendamento para um determinado dia do mês, verificando se há conflitos com outros agendamentos (Não poderá ter mais do que 5 agendamentos). Se houver, uma mensagem de erro éexibida; caso contrário, o agendamento é realizado com sucesso.
 
@@ -22,8 +19,7 @@ Problemas que tivermos:
 1- Calendario sequencial: Todos os dias estavam na mesma ordem em todos os meses. 
 (Concluido) 
 
-1.1- Calendario: No mes de Fevereito para Março possui um erro que não conseguimos resolver, (ex: ano n bissexto: 28 de feveiro cai na quinta, 1 de março esta caindo no sábado. O mesmo vale para o ano bissexto: 29 de feveiro cai na sexta, 1 de março esta caindo no domingo).
-
+1.1- Calendario: No mes de Fevereito para Março possui um erro que não conseguimos resolver, (ex: ano n bissexto: 28 de feveiro cai na quinta, 1 de março esta caindo no sábado. O mesmo vale para o ano bissexto: 29 de feveiro cai na sexta, 1 de março esta caindo no domingo). (Pendente)
 
 2- Tivemos problema em relação ao calendario de agendamentos, não sabíamos se botavamos todos os dias e apenas anulávamos os dias agendados e printava na tela. (Resolvido)
 
